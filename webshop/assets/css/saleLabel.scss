@@ -1,0 +1,37 @@
+ /* sale badge - start */
+ .sale {
+	position: relative;
+	display: inline-block;
+	background: #0275d8;
+	color: white;
+	height: 5rem;
+	width: 5rem;
+	font-size: 2rem;
+	text-align: center;
+	vertical-align: center;
+	line-height: 5rem;
+	margin: 45vh 45vw;
+	transform: rotate(-20deg);
+	animation: beat 1s ease infinite alternate;
+	&:before,
+	&:after {
+		content:"";
+		position: absolute;
+		background: inherit;
+		height: inherit;
+		width: inherit;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transform: rotate(30deg);
+	}
+	&:after {
+		transform: rotate(60deg);
+	}
+}
+
+@keyframes beat {
+	from {	transform: rotate(-20deg) scale(0.75); }
+	to {	transform: rotate(-20deg) scale(0.85); }
+}
+/* sale badge - end */

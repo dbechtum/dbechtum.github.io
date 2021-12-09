@@ -1,0 +1,19 @@
+#myCanvas{
+    /* float:left; */
+    border: 1px solid black;
+    width: 100%;
+    max-width: 536px;
+}
+
+#image_modifiers{
+    display: inline-block;
+}
+
+input[type="range"] {
+    width:400px;
+    max-width: 100%;
+  }
+input[type="file"] {
+    width: 400px;
+    max-width: 100%;
+}
