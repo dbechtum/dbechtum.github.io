@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="shoppingCart">
+            <ul>
+                <li is="cartItem" v-for="(content, index) in cartContent"
+                    v-bind:key="index" v-bind:content_title="content.title"
+                    v-bind:content_id="content.id"
+                    v-bind:content_stock="posters[content.id].stock"
+                    v-bind:content_orientation="content.orientation"
+                    v-bind:content_size="content.size"
+                    v-bind:content_amount="content.amount"
+                    v-bind:content_price="content.size !== 'Small' ? content.size === 'Large' ? 15 : 10 : 5"
+                    v-bind:image_extension="image_extension"
+                    v-bind:image_path="image_path"
+                    v-bind:image_display_as="content.orientation === 'Landscape' ? 'landscape/' : 'portrait/'">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/assets/js/app.js"></script>
+</body>
+
+</html>
